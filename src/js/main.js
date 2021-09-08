@@ -188,3 +188,11 @@ themeButton.addEventListener("click", () => {
   localStorage.setItem("selected-theme", getCurrentTheme)
   localStorage.setItem("selected-icon", getCurrentIcon)
 })
+
+// // -----------------------Show navbar-------------------------------------------
+// function navShow(){
+//   const navShow = document.getElementById("nav-show");
+//   //When scroll is higher than 560 viewport height, and the show-scroll class to the tag with the scroll-up
+//   if(this.scrollY >= 560) navShow.classList.add("show-scroll"); else navShow.classList.remove("show-scroll");
+// }
+// window.addEventListener("navshow", navShow)
