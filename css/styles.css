@@ -398,8 +398,6 @@ transition: 0.3s;
 .button--flex{
   display: inline-flex;
   align-items: center;
-  margin-left: 2rem;
-  margin-top: 1rem;
 }
 
 .button--small{
@@ -429,6 +427,7 @@ transition: 0.3s;
   width: 200px;
   fill: var(--first-color);
 }
+
 
 .about__blob-img{
   width: 170px;
@@ -483,6 +482,14 @@ justify-content: center;
   cursor: pointer;
 }
 
+
+.skills__data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
 .skills__icon,
 .skills__arrow{
   font-size: 2rem;
@@ -507,18 +514,9 @@ font-size: var(--h3-font-size);
   transition: 0.4s;
 }
 
-.skills__list{
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  row-gap: 1.5rem;
-  padding-left: 2.7rem;
-}
-
 .skills__titles{
   display: flex;
-  flex-direction: column;
-  text-align: center;
+  justify-content: space-between;
   margin-bottom: var(--mb-0-5);
 }
 
@@ -734,6 +732,10 @@ margin-bottom: var(--mb-2-5);
   justify-self: center;
 }
 
+.portfolio__data{
+  text-align: center;
+}
+
 .portfolio__title{
   font-size: var(--h3-font-size);
   margin-bottom: var(--mb-0-5);
@@ -741,6 +743,10 @@ margin-bottom: var(--mb-2-5);
 
 .portfolio__description{
   margin-bottom: var(--mb-0-75);
+}
+
+.portfolio__button{
+  margin: 0.75rem;
 }
 
 .portfolio__button:hover .button__icon{
@@ -995,7 +1001,7 @@ margin-bottom: var(--mb-2-5);
   .skills__title{
     font-size: var(--normal-font-size);
   }
-
+  
   .qualification__data{
     gap: 0.5rem;
   }
@@ -1011,6 +1017,10 @@ margin-bottom: var(--mb-2-5);
 
   .services__modal{
     padding: 0 0.5rem;
+  }
+
+  .portfolio__button{
+    margin: 0.5rem;
   }
 
 }
@@ -1029,6 +1039,22 @@ margin-bottom: var(--mb-2-5);
   .home__img{
     order: 1;
     justify-self: center;
+  }
+
+  .skills__data{
+    margin: 2rem;
+  }
+
+  .skills__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .portfolio__button{
+    margin: 0.5rem;
   }
 
   .about__container,
@@ -1139,6 +1165,18 @@ margin-bottom: var(--mb-2-5);
 
   .about__buttons{
     justify-content: initial;
+  }
+
+  .skills__data{
+    margin: 2rem;
+  }
+
+  .skills__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
   .qualification__tabs{
