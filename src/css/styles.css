@@ -1074,6 +1074,14 @@ margin-bottom: var(--mb-2-5);
   margin-top: var(--mb-3) ;
 }
 
+.footer__copy a {
+  color: var(--text-color-light);
+}
+
+.footer__copy a:hover {
+  color: var(--first-color-lighter);
+}
+
 .footer__title,
 .footer__subtitle,
 .footer__link,
@@ -1122,6 +1130,35 @@ margin-bottom: var(--mb-2-5);
 
 ::-webkit-scrollbar-thumb:hover{
   background-color: var(--text-color-light);
+}
+
+/*--------------- Skills -------------------------- */
+.privacy__container{
+  row-gap: 0;
+}
+
+.privacy__header{
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--mb-2-5);
+  cursor: pointer;
+}
+
+
+.privacy__data{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.privacy__title{
+font-size: var(--h3-font-size);
+}
+
+.privacy__subtitle{
+  font-size: var(--small-font-size);
+  color: var(--text-color-light);
 }
 
 /*--------------- Media Queries -------------------------- */
@@ -1226,6 +1263,18 @@ margin-bottom: var(--mb-2-5);
   .qualification__sections{
     display: grid;
     grid-template-columns: 0.6fr;
+    justify-content: center;
+  }
+
+  .privacy__data{
+    margin: 2rem;
+  }
+
+  .privacy__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
   }
 }
@@ -1415,6 +1464,18 @@ margin-bottom: var(--mb-2-5);
 
   .footer__copy{
     margin-top: 4.5rem;
+  }
+
+  .privacy__data{
+    margin: 2rem;
+  }
+
+  .privacy__list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
   }
 
 
