@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 // -----------------------Menu show y hidden---------------------------------------
 const navMenu = document.getElementById("nav-menu")
 const navToggle = document.getElementById("nav-toggle")
@@ -207,29 +209,44 @@ let message = document.getElementById("message")
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let formData = {
+  axios({
+    method: "POST",
+    url: "https://portfolio-brisilda.herokuapp.com/contact",
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    data: {
     name: name.value,
     email: email.value,
     subject: subject.value,
     message: message.value
-  }
-
-  let xhr = new XMLHttpRequest();
-  xhr.open("POST", "/");
-  xhr.setRequestHeader("content-type", "application/json");
-  xhr.onload = function(){
-    console.log(xhr.responseText);
-    if(xhr.responseText === "success"){
-      alert("Email Sent!");
-      name.value = "";
-      email.value = "";
-      subject.value = "";
-      message.value = "";
-    } else {
-      alert("Something went wrong!")
     }
-  }
+  }).then(response => {
+    if (response) {
+      console.log("Email has been sent");
+      alert("Thank you. Your message has been sent")
+      window.location.reload();
+    } else {
+      console.log("FAILURE");
+    }
+  });
 
-  xhr.send(JSON.stringify(formData))
+  // let xhr = new XMLHttpRequest();
+  // xhr.open("POST", "/");
+  // xhr.setRequestHeader("content-type", "application/json");
+  // xhr.onload = function(){
+  //   console.log(xhr.responseText);
+  //   if(xhr.responseText === "success"){
+  //     alert("Email Sent!");
+  //     name.value = "";
+  //     email.value = "";
+  //     subject.value = "";
+  //     message.value = "";
+  //   } else {
+  //     alert("Something went wrong!")
+  //   }
+  // }
+
+  // xhr.send(JSON.stringify(formData))
 
 })
