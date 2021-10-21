@@ -56,6 +56,18 @@
 
 }
 
+/*--------------- Form input fields ------------- */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px var(--body-color) inset !important;
+}
+
+input:-webkit-autofill{
+  -webkit-text-fill-color: var(--title-color) !important;
+}
+
 /*--------------- z-index ------------- */
   @media screen and (min-width: 968px){
     :root {
@@ -966,6 +978,14 @@ margin-bottom: var(--mb-2-5);
   color: #FFF;
 }
 
+.project__description a{
+ color: #FFF;
+}
+
+.project__description a:hover{
+  color: var(--first-color-lighter);
+ }
+
 .project__img{
   width: 232px;
   justify-self: center;
@@ -978,6 +998,11 @@ margin-bottom: var(--mb-2-5);
 
 .project__blob-img{
   width: 170px;
+}
+
+.project__data .button {
+  font-size: var(--normal-font-size);
+  font-family: var(--body-font);
 }
 
 
@@ -1011,26 +1036,34 @@ margin-bottom: var(--mb-2-5);
 }
 
 .contact__content{
-  background-color: var(--input-color);
+  /* background-color: var(--input-color); */
   border-radius: 0.5rem;
   padding: 0.75rem 1rem 0.25rem;
 }
 
 .contact__label{
-  font-size: var(--smaller-font-size);
+  font-size: var(--normal-font-size);
   color: var(--title-color);
 }
 
 .contact__input{
   width: 100%;
-  background-color: var(--input-color);
+  background-color: transparent;
   color: var(--text-color);
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   border: none;
+  border-bottom: 2px solid var(--first-color);
   outline: none;
   padding: 0.25rem 0.5rem 0.5rem 0;
+  
 }
+
+.contact__input:focus,
+.contact__input:active{
+  box-shadow: hsla(230, 87%, 56%, 0.4) 5px 5px, hsla(230, 87%, 56%, 0.3) 10px 10px, hsla(230, 87%, 56%, 0.2) 15px 15px, hsla(230, 87%, 56%, 0.1) 20px 20px, hsla(230, 87%, 56%, 0.05) 25px 25px;
+}
+
 
 /*--------------- Footer -------------------------- */
 .footer{
@@ -1047,8 +1080,12 @@ margin-bottom: var(--mb-2-5);
 }
 
 .footer__title{
-  font-size: var(--h1-font-size);
+  font-size: var(--h2-font-size);
   margin-bottom: var(--mb-0-25);
+}
+
+.footer__container img{
+  width: 6rem;
 }
 
 .footer__subtitle{
