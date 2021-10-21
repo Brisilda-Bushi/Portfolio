@@ -220,13 +220,13 @@ contactForm.addEventListener("submit", (e) => {
   xhr.onload = function(){
     console.log(xhr.responseText);
     if(xhr.responseText === "success"){
-      alert("Email Sent!");
+      swal("Thank you!", "Email Sent!", "success");
       name.value = "";
       email.value = "";
       subject.value = "";
       message.value = "";
     } else {
-      alert("Something went wrong!")
+      swal("Sorry","Something went wrong!", "error")
     }
   }
 
