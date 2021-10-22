@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const nodemailer = require("nodemailer")
-require("dotenv").config();
+require("dotenv").config({path: "./config.env"});
 
 const PORT = process.env.PORT || 5000;
 
@@ -20,8 +20,8 @@ app.post("/", (req, res) => {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "web.brisilda@gmail.com",
-      pass: "istoselida",
+      user: process.env.EMAIL,
+      pass: process.env.PASSWORD,
     },
     tls: {
       // do not fail on invalid certs
