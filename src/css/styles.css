@@ -7,7 +7,7 @@
   --header-height: 3rem;
 /*--------------- colors------------- */
 /*---------------Change favorite color------------- */
-  --hue-color: 230; /* purple 250 - Green 142 - Blue 230 - Pink 340 */
+  --hue-color: 250; /* purple 250 - Green 142 - Blue 230 - Pink 340 */
 
 /*--------------- HSL Color mode------------- */
   --first-color: hsl(var(--hue-color), 69%, 61%) ;
@@ -798,12 +798,12 @@ margin-bottom: var(--mb-2-5);
   background-color: var(--container-color);
   padding: 3.5rem 0.5rem 1.25rem 1.5rem;
   border-radius: 0.25rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.15);
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 2px 0px, rgba(0, 0, 0, 0.22) 0px 1px 3px 1px;
   transition: 0.3s;
 }
 
 .services__content:hover{
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 
 .services__icon{
@@ -1061,7 +1061,7 @@ margin-bottom: var(--mb-2-5);
 
 .contact__input:focus,
 .contact__input:active{
-  box-shadow: hsla(230, 87%, 56%, 0.4) 5px 5px, hsla(230, 87%, 56%, 0.3) 10px 10px, hsla(230, 87%, 56%, 0.2) 15px 15px, hsla(230, 87%, 56%, 0.1) 20px 20px, hsla(230, 87%, 56%, 0.05) 25px 25px;
+  box-shadow: hsla(250, 87%, 56%, 0.4) 5px 5px, hsla(250, 87%, 56%, 0.3) 10px 10px, hsla(250, 87%, 56%, 0.2) 15px 15px, hsla(250, 87%, 56%, 0.1) 20px 20px, hsla(250, 87%, 56%, 0.05) 25px 25px;
 }
 
 
@@ -1453,7 +1453,7 @@ font-size: var(--h3-font-size);
   }
 
   .services__content{
-    padding: 6rem 0 2rem 2.5rem;
+    padding: 4rem 0 2rem 3rem;
   }
 
   .services__modal-content{
