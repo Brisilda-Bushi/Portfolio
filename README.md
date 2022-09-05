@@ -1,7 +1,7 @@
 # Portfolio
 This is my personal portfolio which I dedicated 3 full days to complete in Full Stack!
 
-Demo: (http://www.brisilda-bushi.me)
+Demo: (http://www.brisilda-bushi.com)
 
 ## How did I develop this project:
 
